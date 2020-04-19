@@ -3,6 +3,8 @@ package sulehri.programming.training;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class Application {
 	
 	public Application() {
@@ -21,6 +23,13 @@ public class Application {
 		
 		Application app=new Application();
 		app.greet();
+		
+		System.out.println(app.countWords("A quick brown fox jumps over the lazy dog"));
+	}
+	
+	public int countWords(String words) {
+		String[] seperateWords=StringUtils.split(words);
+		return seperateWords==null ?0 : seperateWords.length;
 	}
 
 }
